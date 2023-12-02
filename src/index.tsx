@@ -1,10 +1,11 @@
-import { render } from "react-dom";
+import { createRoot } from 'react-dom/client';
 import { App } from "./App";
 import { ThemeProvider } from "./theme/ThemeProvider";
 
-render(
+const root = createRoot(document.getElementById('root'));
+
+root.render(
   <ThemeProvider>
     <App />
-  </ThemeProvider>,
-  document.getElementById('root')
-)
+  </ThemeProvider>
+);

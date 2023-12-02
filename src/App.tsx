@@ -1,3 +1,4 @@
+import { classNames } from "./helpers/classNames/classNames"
 import './styles/index.scss'
 import { useTheme } from "./theme/useTheme"
 
@@ -8,8 +9,8 @@ export const App = () => {
 
 
   return (
-    <div className={`app ${theme}`}>
-    <button onClick={toggleTheme}>TOGGLE</button>
-</div>
+    <div className={classNames('app', {}, [theme])}>
+      <button onClick={toggleTheme}>TOGGLE</button>
+    </div>
   )
 }
